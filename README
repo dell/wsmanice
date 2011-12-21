@@ -1,0 +1,29 @@
+PACKAGE:
+
+   wsmanice
+
+DESCRIPTION:
+
+   Contains a tool to re-display the output of the wsman CLI tool to a more 
+   user-friendly format. The wsman CLI tool is an open source application 
+   in the openwsman project. 
+
+   A typical use of this is:
+      wsman ARGUMENTS... | ./wsmanice
+
+   It creates a temporary file and deletes it before exit. If execution is
+   interrupted before it completes, manually delete the temporary file.
+
+REQUIREMENTS:
+
+   Requires xsltproc tool.
+
+   Works only in batch mode "-o -m N" where N is large enough so that
+   it prevents a pull response.
+
+   Does not work with "-R" or print request
+
+REVISION:
+
+   0.1.0   - Package created.
+
